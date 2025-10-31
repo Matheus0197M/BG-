@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/areaAluno.css" />
+    <title>Área do Aluno</title>
+  </head>
+  <body>
+
+    <!-- Teste de comentário -->
+   
+    <!-- HEADER -->
+    <header id="header">
+      <h1>Área do Aluno</h1>
+      <nav>
+        <a href="../html/index1.html">Ir para Home</a>
+
+      </nav>
+    </header>
+   
+    <!-- MAIN -->
+    <main>
+    <h2>Histórico de atividades</h2>
+    <p>
+      Escolha abaixo uma das categorias disponíveis para visualizar suas
+      atividades
+    </p>
+    <br />  
+    <button id="flipBtn" type="button">Em andamento</button>
+    <section id="card" class="card">
+      <article id="front">
+        <table>
+          <thead>
+            <h2>Cursos em Andamento</h2>
+            <p>Lista de cursos em andamento</p>
+          </thead>
+          <tbody>
+            <tr>
+            <td class="nomeCurso">Nome</td>
+            <td class="inicioCurso">Início</td>
+            <td class="acessoCurso">Acesso</td>
+          </tr>
+            <tr>
+              <td class="nomeCurso">WWW</td>
+              <td class="inicioCurso">WWW</td>
+              <td class="acessoCurso"><a href="#"><img src="../assets/acesso-direto.png" alt=""></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article id="back">
+        <table>
+          <thead>
+            <h2>Cursos Concluídos</h2>
+            <p>Lista de cursos finalizados</p>
+          </thead>
+          <tbody>
+            <tr>
+            <td class="nomeCurso">Nome</td>
+            <td class="inicioCurso">Início</td>
+            <td class="terminoCurso">Término</td>
+            <td class="cargaCurso">Carga Hrs.</td>
+            <td class="aprovacaoCurso">Aprovação</td>
+            <td class="certificadoCurso">Certificado</td>
+          </tr>
+            <tr>
+              <td class="nomeCurso">WWW</td>
+              <td class="inicioCurso">WWW</td>
+              <td class="terminoCurso">WWW</td>
+              <td class="cargaCurso">WWW</td>
+              <td class="aprovacaoCurso">WWW</td>
+              <td class="certificadoCurso"><a href="#"><img src="../assets/icons8-certificado-48.png" alt=""></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+
+  <script src="../js/areaAluno.js"></script>
+  <script src="../js/script1.js"></script>
+  </body>
+</html>

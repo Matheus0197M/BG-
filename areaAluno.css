@@ -1,0 +1,247 @@
+/* ========== RESET BÁSICO ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* mano, ja acabamo, falta mesmo eh fazer o backend nessa merda*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  line-height: 1.6;
+  background: #fcfaf7;
+  color: #222;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: rgb(255, 136, 0);
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #eee;
+  padding: 1rem;
+  height: 8dvh;
+}
+
+nav a{
+  text-decoration: none;
+  color: #005bb5;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav a:hover{
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  background: #35bcff;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+/* MAIN */
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 12rem;
+}
+
+h2{
+  margin-top: 2rem;
+  font-size: 2.4rem;
+}
+
+p{
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* TABELA */
+table{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+tbody{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 100%;
+  text-align: center;
+  /* Aprender umas animação louca aí man.... */
+}
+
+tr{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #bbb;
+  height: 15dvh;
+}
+
+td{
+  padding: 1rem;
+  border: 2px solid #aaa;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tamanho de cada item da tabela*/
+.nomeCurso{
+  width: 30dvw;
+}
+
+.inicioCurso, .terminoCurso, .cargaCurso, .aprovacaoCurso, .certificadoCurso, .acessoCurso{
+  width: 12dvw;
+}
+
+/* CARD */
+.card{
+  width: 90dvw;
+  height: 80dvh;
+  perspective: 1000px;
+  margin: 1rem;
+  border-radius: 10px;
+  margin-bottom: 4rem;
+}
+
+.card article{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24px;
+  border-radius: 8px;
+  transition: transform 0.6s;
+  padding: 1rem;
+  text-align: center;
+  color: #110;
+  gap: 1rem;
+}
+
+#front{
+  background: rgb(250, 250, 250);
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 8px rgba(255, 136, 0, 0.3);
+}
+
+#back{
+  background: rgb(250, 250, 250);
+  margin-bottom: 4rem;
+  transform: rotateX(180deg);
+  box-shadow: 0 4px 8px rgba(0, 4, 255, 0.3);
+}
+
+/* ESTILIZAÇÕES ADICIONAIS */
+#front h2{
+  text-shadow: 0 4px 8px rgba(255, 196, 0, 0.5);
+}
+
+#back h2{
+  text-shadow: 0 4px 8px rgba(0, 89, 255, 0.5);
+}
+
+#front table{
+  background: linear-gradient(to bottom, rgb(250, 250, 250), #eee);
+  border-radius: 8px;
+}
+
+#back table{
+  background: linear-gradient(to bottom, rgb(250, 250, 250), #eee);
+  border-radius: 8px;
+}
+
+.card.flipped #front{
+  transform: rotateX(180deg);
+}
+
+.card.flipped #back{
+  transform: rotateX(0deg);
+}
+
+img{
+  width: 1.5rem;
+  height: 1.5rem;
+  text-wrap: calc(1.5rem);
+}
+
+/* BUTTON */
+#flipBtn {
+  background: #35bcff;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#flipBtn:hover {
+  background: linear-gradient(to bottom, #35bcff, #005bb5);
+  transform: scale(1.02);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* =========== MOBILE ==========*/
+@media(max-width: 768px){
+  body{
+    text-align: center;
+  }
+
+  /* Header */
+  h1{
+    padding: 12px 14px;
+    font-size: 10px;
+  }
+
+  /* Main */
+  main{
+    gap: 1rem;
+    padding: 1rem 10px;
+  }
+
+  .card{
+    height: 100dvh;
+  }
+
+  .card article{
+    height: 70dvh;
+    font-size: 16px;
+    word-spacing: 5px;
+  }
+}
